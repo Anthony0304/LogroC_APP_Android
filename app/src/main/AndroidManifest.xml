@@ -18,6 +18,9 @@
         tools:ignore="ExtraText"
         tools:targetApi="28">
         <activity
+            android:name=".MovieDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".MovieListActivity"
             android:exported="false" />
         <activity

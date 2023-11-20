@@ -18,5 +18,12 @@ public class SearchResult {
     @SerializedName("release_date")
     private String releaseDate;
 
+    @SerializedName("revenue")
+    private String revenue;
+
+    @SerializedName("budget")
+    private String budget;
+
     // getters y setters
 }
+

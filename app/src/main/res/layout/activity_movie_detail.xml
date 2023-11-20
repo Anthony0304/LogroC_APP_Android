@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailActivity">
+
+    <!-- ImageView para mostrar el póster de la película -->
+    <ImageView
+        android:id="@+id/imageViewPoster"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <!-- TextView para mostrar la descripción/overview de la película -->
+    <TextView
+        android:id="@+id/textViewOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewPoster"
+        android:padding="16dp"
+        android:text=""
+        android:textSize="16sp" />
+
+    <!-- TextView para mostrar la fecha de lanzamiento (release_date) -->
+    <TextView
+        android:id="@+id/textViewReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewOverview"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textSize="14sp" />
+
+    <!-- TextView para mostrar los ingresos (revenue) -->
+    <TextView
+        android:id="@+id/textViewRevenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewReleaseDate"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textSize="14sp" />
+
+    <!-- TextView para mostrar el presupuesto (budget) -->
+    <TextView
+        android:id="@+id/textViewBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRevenue"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textSize="14sp" />
+
+    <!-- TextView para mostrar los géneros (genres) -->
+    <TextView
+        android:id="@+id/textViewGenres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBudget"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textSize="14sp" />
+
+    <!-- Puedes agregar más vistas según sea necesario -->
+
+</RelativeLayout>

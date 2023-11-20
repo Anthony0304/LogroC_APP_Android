@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -59,6 +60,17 @@ public class MovieListActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        // Configurar el listener para hacer clic en un elemento de la lista
+        listViewMovies.setOnItemClickListener((parent, view, position, id) -> {
+            // Obtiene la película seleccionada
+            Movie selectedMovie = displayedMovieList.get(position);
+
+            // Inicia la actividad de detalles y pasa la película seleccionada
+            Intent intent = new Intent(MovieListActivity.this, MovieDetailActivity.class);
+            intent.putExtra("selectedMovie", selectedMovie);
+            startActivity(intent);
+        });
     }
 
     private void showMovieList(List<Movie> movieList) {
@@ -72,6 +84,7 @@ public class MovieListActivity extends AppCompatActivity {
                             "\nOverview: " + movie.getOverview() +
                             "\nRelease Date: " + movie.getReleaseDate() +
                             "\nPoster Path: " + movie.getPosterPath();
+
 
                     movieInfoList.add(movieInfo);
                 }
@@ -100,13 +113,18 @@ public class MovieListActivity extends AppCompatActivity {
             } else {
                 // Filtrar la lista original en función de la consulta
                 for (Movie movie : originalMovieList) {
-                    if (movie.getTitle().toLowerCase().contains(query.toLowerCase())) {
+                    // Verificar si la consulta coincide con el ID, nombre, overview, poster_path o release_date
+                    if (String.valueOf(movie.getId()).contains(query) ||
+                            movie.getTitle().toLowerCase().contains(query.toLowerCase()) ||
+                            movie.getOverview().toLowerCase().contains(query.toLowerCase()) ||
+                            movie.getPosterPath().toLowerCase().contains(query.toLowerCase()) ||
+                            movie.getReleaseDate().toLowerCase().contains(query.toLowerCase())) {
                         displayedMovieList.add(movie);
                     }
                 }
             }
 
-            // Actualizar la lista mostrada en el ListView
+            // Actualizar la lista mostrada en el ListVie
             showMovieList(displayedMovieList);
         }
     }
