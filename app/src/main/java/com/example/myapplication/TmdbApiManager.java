@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TmdbApiManager {
 
     private static final String BASE_URL = "https://api.themoviedb.org/3/";
-    private static final String API_KEY = "43bb95cae941badc90476b9f10f04134"; // Tu clave de API
+    private static final String API_KEY = "43bb95cae941badc90476b9f10f04134";
 
     private static TmdbApiService tmdbApiService;
 

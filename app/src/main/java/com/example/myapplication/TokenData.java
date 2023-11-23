@@ -28,7 +28,7 @@ public class TokenData {
     @SerializedName("id")
     private int id;
 
-    // Getter y setter para el campo 'name'
+
     public String getName() {
         return name;
     }
@@ -37,5 +37,5 @@ public class TokenData {
         this.name = name;
     }
 
-    // Otros getters y setters
+
 }

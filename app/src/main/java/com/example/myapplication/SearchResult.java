@@ -23,7 +23,5 @@ public class SearchResult {
 
     @SerializedName("budget")
     private String budget;
-
-    // getters y setters
 }
 

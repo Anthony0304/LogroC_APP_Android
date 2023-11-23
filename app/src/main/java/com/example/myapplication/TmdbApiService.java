@@ -14,7 +14,7 @@ public interface TmdbApiService {
     );
 
     @GET("search/movie")
-    Call<MovieResponse> searchMovies(  // Cambié el nombre del método a searchMovies
+    Call<MovieResponse> searchMovies(
                                        @Query("api_key") String apiKey,
                                        @Query("language") String language,
                                        @Query("query") String query,

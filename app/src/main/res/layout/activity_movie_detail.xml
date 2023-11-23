@@ -44,7 +44,7 @@
         android:text=""
         android:textSize="14sp" />
 
-    <!-- TextView para mostrar el presupuesto (budget) -->
+
     <TextView
         android:id="@+id/textViewBudget"
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:text=""
         android:textSize="14sp" />
 
-    <!-- TextView para mostrar los géneros (genres) -->
+
     <TextView
         android:id="@+id/textViewGenres"
         android:layout_width="wrap_content"
@@ -66,6 +66,6 @@
         android:text=""
         android:textSize="14sp" />
 
-    <!-- Puedes agregar más vistas según sea necesario -->
+
 
 </RelativeLayout>

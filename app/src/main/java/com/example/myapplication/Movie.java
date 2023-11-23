@@ -33,8 +33,8 @@ public class Movie implements Parcelable {
         overview = in.readString();
         poster_path = in.readString();
         release_date = in.readString();
-        revenue = in.readString(); // Asegúrate de agregar esto en el orden correcto
-        budget = in.readString();  // Asegúrate de agregar esto en el orden correcto
+        revenue = in.readString();
+        budget = in.readString();
     }
 
 
@@ -90,7 +90,7 @@ public class Movie implements Parcelable {
         dest.writeString(overview);
         dest.writeString(poster_path);
         dest.writeString(release_date);
-        dest.writeString(revenue); // Agregar esta línea para escribir revenue en el Parcel
+        dest.writeString(revenue);
         dest.writeString(budget);
 
     }
