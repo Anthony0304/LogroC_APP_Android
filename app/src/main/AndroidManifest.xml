@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
-
+    <!-- Añadir permiso de acceso a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -17,22 +17,6 @@
         android:theme="@style/Theme.MyApplication"
         tools:ignore="ExtraText"
         tools:targetApi="28">
-
-        <activity
-            android:name=".SplashActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"> <!-- Mantuve exported en false para que sea secundaria -->
-        </activity>
-
         <activity
             android:name=".MovieDetailActivity"
             android:exported="false" />
@@ -42,6 +26,19 @@
         <activity
             android:name=".activity_register"
             android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Splashscreen"
+            android:exported="true">
+            <!-- Intent filter for the main activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
