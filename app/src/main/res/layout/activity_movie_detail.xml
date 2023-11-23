@@ -6,23 +6,29 @@
     tools:context=".MovieDetailActivity">
 
     <!-- ImageView para mostrar el póster de la película -->
+
+    <!-- TextView para mostrar la descripción/overview de la película -->
+
+    <!-- TextView para mostrar la fecha de lanzamiento (release_date) -->
+
     <ImageView
         android:id="@+id/imageViewPoster"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:layout_height="256dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:scaleType="center" />
 
-    <!-- TextView para mostrar la descripción/overview de la película -->
     <TextView
         android:id="@+id/textViewOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewPoster"
+        android:layout_marginTop="2dp"
         android:padding="16dp"
         android:text=""
         android:textSize="16sp" />
 
-    <!-- TextView para mostrar la fecha de lanzamiento (release_date) -->
     <TextView
         android:id="@+id/textViewReleaseDate"
         android:layout_width="wrap_content"
@@ -50,8 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewRevenue"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
         android:text=""
         android:textSize="14sp" />
 
